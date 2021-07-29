@@ -10,6 +10,7 @@ function handleReady() {
 
 function submitGuesses() {
   let allGuesses = {
+
       guessOne: $('#firstGuessIn').val(),
       guessTwo: $('#secondGuessIn').val(),
       guessThree: $('#thirdGuessIn').val()

@@ -4,6 +4,8 @@
         [X] store guesses
     [ ] check each guess against assigned random number
     [ ] guess feedback (right/wrong, low/high)
+        [X] number guessed
+        [ ] low/high
     [ ] POST reset game
 
 [ ] CLIENT SIDE
@@ -12,7 +14,7 @@
     [X] total guess made indicator (created)
         [X] total guess made indicator (functional)
     [ ] display details for each guesser (feedback)
-        [ ] guess
+        [X] guess
         [ ] high/low
     [ ] append win game notification
         [ ] restart game button

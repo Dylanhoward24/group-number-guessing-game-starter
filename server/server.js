@@ -15,10 +15,28 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-let target = getRandomNumber(1, 25);
+// let target = getRandomNumber(1, 25);
+let target = 1;
 
 app.post('/guesses', (req, res) => {
   let newGuesses = req.body;
+  // run checks on all guesses
+  // guesses format:
+  // guessOne: $('#firstGuessIn').val(),
+  // guessTwo: $('#secondGuessIn').val(),
+  // guessThree: $('#thirdGuessIn').val()
+  for (guess of Object.values(newGuesses)) {
+    if (guessOne === target) {
+      console.log('congrats, Dylan, you won!');
+    }else if (guessTwo === target) {
+      console.log('congrats, Dan, you won!');
+    }else if (guessThree === target) {
+      console.log('congrats, Curtis, you won!');
+    }else{
+      console.log('oops, you all stink at this game');
+    }
+  }
+  // pack into newGuesses object
   storedGuesses.push(newGuesses);
   console.log(newGuesses);
   console.log(storedGuesses.length);
