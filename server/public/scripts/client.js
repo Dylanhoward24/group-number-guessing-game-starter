@@ -1,12 +1,24 @@
 $(document).ready(handleReady);
 
 function handleReady() {
-  console.log("jquery is loaded!")
+  console.log("jquery is loaded!");
 
-  $.ajax({
-    method: "GET",
-    url: "/guesses"
-  }).then((response) => {
-    
-  })
+  $('#submit').on('click', submitGuesses); 
+}
+
+function submitGuesses() {
+  let allGuesses = {
+      guessOne: $('#firstGuessIn').val(),
+      guessTwo: $('#secondGuessIn').val(),
+      guessThree: $('#thirdGuessIn').val()
+    }
+
+    $.ajax({
+      method: "POST",
+      url: "/guesses",
+      data: allGuesses
+    }).then((response) => {
+      console.log('this is working?!?!');
+      console.log(allGuesses);
+    });
 }

@@ -17,9 +17,11 @@ function getRandomNumber(min, max) {
 
 let target = getRandomNumber(1, 25);
 
-app.get('/guesses', (req, res) => {
+app.post('/guesses', (req, res) => {
   let newGuesses = req.body;
+  storedGuesses.push(newGuesses);
   console.log(newGuesses);
+  res.sendStatus(201);
 })
 
 app.listen(PORT, () => {
