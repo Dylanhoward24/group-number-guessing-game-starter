@@ -1,0 +1,20 @@
+[ ] SERVER SIDE
+    [ ] generate random number between 1-25
+    [ ] GET guesses
+        [ ] store guesses
+    [ ] check each guess against assigned random number
+    [ ] guess feedback (right/wrong, low/high)
+    [ ] POST reset game
+
+[ ] CLIENT SIDE
+    [ ] add 3 input fields for guesses
+        [ ] submit guesses button
+    [ ] total guess made indicator
+    [ ] display details for each guesser (feedback)
+    [ ] append win game notification
+        [ ] restart game button
+    [ ] POST guesses to server - via ajax
+    [ ] Get object
+        [ ] GET previous guesses and display on DOM
+        [ ] GET feedback and display on DOM
+    [ ] POST reset game
