@@ -26,12 +26,8 @@ app.post('/guesses', (req, res) => {
   // guessTwo: $('#secondGuessIn').val(),
   // guessThree: $('#thirdGuessIn').val()
   for (guess of Object.values(newGuesses)) {
-    if (guessOne === target) {
-      console.log('congrats, Dylan, you won!');
-    }else if (guessTwo === target) {
-      console.log('congrats, Dan, you won!');
-    }else if (guessThree === target) {
-      console.log('congrats, Curtis, you won!');
+    if (Number(guess) === target) {
+      console.log('congrats, someone, you won!');
     }else{
       console.log('oops, you all stink at this game');
     }
