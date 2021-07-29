@@ -44,10 +44,10 @@ function displayGuessesAndCount(guesses) {
 
 function displayGuessHistory(guesses) {
   $('#totalGuesses').empty();
-  // $('#totalGuesses').val(guesses.length);
+  $('#totalGuesses').append(guesses.length);
   $('#feedback').empty();
 
-  for (guess in guesses) {
+  for (guess of guesses) {
     $('#feedback').append(`
       <tr>
         <td>${guess.guessOne}</td>

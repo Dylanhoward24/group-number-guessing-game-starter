@@ -10,8 +10,10 @@
     [X] add 3 input fields for guesses
         [X] submit guesses button
     [X] total guess made indicator (created)
-        [ ] total guess made indicator (functional)
+        [X] total guess made indicator (functional)
     [ ] display details for each guesser (feedback)
+        [ ] guess
+        [ ] high/low
     [ ] append win game notification
         [ ] restart game button
     [ ] POST guesses to server - via ajax
