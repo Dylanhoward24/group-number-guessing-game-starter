@@ -1,5 +1,5 @@
 [ ] SERVER SIDE
-    [ ] generate random number between 1-25
+    [X] generate random number between 1-25
     [ ] GET guesses
         [ ] store guesses
     [ ] check each guess against assigned random number
