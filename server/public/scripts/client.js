@@ -34,7 +34,9 @@ function displayGuessesAndCount(guesses) {
     method: 'GET',
     url: '/all-guesses'
   }).then((response) => {
-    let guesses = response.body;
+    let guesses = response;
+    console.log('response: ', response);
+    console.log('guesses: ', guesses);
     // call display function
     displayGuessHistory(guesses);
   })
