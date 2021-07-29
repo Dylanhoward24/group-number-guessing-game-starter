@@ -21,7 +21,12 @@ app.post('/guesses', (req, res) => {
   let newGuesses = req.body;
   storedGuesses.push(newGuesses);
   console.log(newGuesses);
+  console.log(storedGuesses.length);
   res.sendStatus(201);
+})
+
+app.get('/all-guesses', (req, res) => {
+  res.send(storedGuesses);
 })
 
 app.listen(PORT, () => {
