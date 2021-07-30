@@ -60,10 +60,21 @@ function displayGuessHistory(guesses) {
   for (guess of guesses) {
     $('#feedback').append(`
       <tr>
-        <td>${guess.one.guess}</td>
-        <td>${guess.two.guess}</td>
-        <td>${guess.three.guess}</td>
+        <td>${guess.one.guess}, ${guess.one.evaluation}</td>
+        <td>${guess.two.guess}, ${guess.two.evaluation}</td>
+        <td>${guess.three.guess}, ${guess.three.evaluation}</td>
       </tr>
     `)
   }
+  displayEvaluationResults(guesses[guesses.length-1]);
+}
+
+function displayEvaluationResults(guess) {
+    if (guess.one.evaluation === 'win'){
+      alert('congrats, player one, you won!');
+    }else if(guess.two.evaluation === 'win') {
+      alert('congrats, player two, you won!');
+    }else if (guess.three.evalutation === 'win') {
+    alert('congrats, player three, you won!');
+    }
 }
