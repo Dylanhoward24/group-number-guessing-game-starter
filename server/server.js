@@ -16,7 +16,7 @@ function getRandomNumber(min, max) {
 };
 
 // let target = getRandomNumber(1, 25);
-let target = 1;
+let target = 2;
 
 app.post('/guesses', (req, res) => {
   let newGuesses = req.body;
@@ -25,11 +25,13 @@ app.post('/guesses', (req, res) => {
   // guessOne: $('#firstGuessIn').val(),
   // guessTwo: $('#secondGuessIn').val(),
   // guessThree: $('#thirdGuessIn').val()
-  for (guess of Object.values(newGuesses)) {
-    if (Number(guess) === target) {
-      console.log('congrats, someone, you won!');
-    }else{
-      console.log('oops, you all stink at this game');
+  for (player of Object.values(newGuesses)) {
+    if (Number(player.guess) === target) {
+      console.log(`congrats, ${player}, you won!`);
+    } else if (Number(player.guess) > target) {
+      console.log('too high!');
+    } else {
+      console.log('too low!');
     }
   }
   // pack into newGuesses object

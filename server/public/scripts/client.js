@@ -10,10 +10,21 @@ function handleReady() {
 
 function submitGuesses() {
   let allGuesses = {
-
-      guessOne: $('#firstGuessIn').val(),
-      guessTwo: $('#secondGuessIn').val(),
-      guessThree: $('#thirdGuessIn').val()
+    one:
+      {
+        guess: $('#firstGuessIn').val(),
+        evaluation: ''
+      },
+    two:
+      {
+        guess: $('#secondGuessIn').val(),
+        evaluation: ''
+      },
+    three:
+      {
+        guess: $('#thirdGuessIn').val(),
+        evaluation: ''
+      },
     }
 
     $.ajax({
@@ -25,8 +36,6 @@ function submitGuesses() {
       console.log(allGuesses);
       displayGuessesAndCount();
     });
-
-
 }
 
 function displayGuessesAndCount(guesses) {
@@ -51,9 +60,9 @@ function displayGuessHistory(guesses) {
   for (guess of guesses) {
     $('#feedback').append(`
       <tr>
-        <td>${guess.guessOne}</td>
-        <td>${guess.guessTwo}</td>
-        <td>${guess.guessThree}</td>
+        <td>${guess.one.guess}</td>
+        <td>${guess.two.guess}</td>
+        <td>${guess.three.guess}</td>
       </tr>
     `)
   }
