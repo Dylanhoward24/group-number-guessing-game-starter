@@ -15,7 +15,7 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-// let target = getRandomNumber(1, 25);
+let target = getRandomNumber(1, 25);
 // let target = 2;
 
 app.post('/guesses', (req, res) => {
